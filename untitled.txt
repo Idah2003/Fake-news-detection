@@ -1,0 +1,79 @@
+
+                         PROJECT ASSIGNMENT REPORT
+
+
+PROJECT TITLE: Exploratory Data Analysis and Data Preprocessing for Fake News Detection
+COURSE: Artificial Intelligent
+DATE: August 11, 2026
+
+
+GROUP MEMBERS:
+
+1. Effah Idah Antwiwaah --UEB3508423
+2. Agyei Konadu Kinsley --UEB350
+
+
+
+1. INTRODUCTION & OBJECTIVE
+
+The objective of this project phase is to ingest, clean, merge, and perform 
+exploratory data analysis (EDA) on a benchmark news dataset containing both 
+verified real news articles and known fake news articles. This serves as the 
+foundation for training a supervised classification model to automatically 
+detect fake news.
+
+
+2. METHODOLOGY & DATA PROCESSING
+
+* Data Acquisition: Loaded two distinct corpora comprising true news articles 
+  (True.csv) and fake news articles (Fake.csv).
+* Feature Engineering & Labeling: Created a binary numerical target column 
+  named "category" where:
+    - Fake news is encoded as 1.
+    - Real news is encoded as 0.
+* Dataset Integration: Merged both subsets vertically using Pandas DataFrame 
+  concatenation, resulting in a unified dataset consisting of 44,898 total rows 
+  and features including title, text, subject, date, and category.
+
+
+3. EXPLORATORY DATA ANALYSIS (EDA) & VISUALIZATIONS
+
+* Class Distribution Analysis: Utilized Seaborn and Matplotlib (`sns.countplot`) 
+  to visualize the balance between real (0) and fake (1) news categories, ensuring 
+  no extreme class imbalances that could adversely affect model training.
+
+insert distrubution graph here
+
+
+
+* Subject Breakdown Analysis: Generated a horizontal frequency count plot grouped 
+  by the `subject` feature to examine the thematic distribution of articles 
+  (e.g., politics, world news, government news) across the dataset.
+* Data Labels: Enhanced plots with explicit data labels on the bars to provide 
+  exact numerical counts at a glance during visual inspection.
+
+
+
+
+
+
+insert the count plot here
+
+
+
+
+
+
+4. CONCLUSION & NEXT STEPS
+
+The data preprocessing and exploratory visualization pipeline has been successfully 
+implemented. The data is clean, labeled, and properly visualized. 
+
+Next steps for the group project include:
+
+
+
+1. Text data cleaning (removing stopwords, punctuation, and lowercase conversion).
+2. Feature extraction using TF-IDF (Term Frequency-Inverse Document Frequency).
+3. Training machine learning classifiers (e.g., Logistic Regression, PassiveAggressive 
+   Classifier) to predict news authenticity.
